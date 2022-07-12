@@ -1,5 +1,6 @@
 <template>
 <div>
+      <div>
          <q-btn color="primary" label="Scale Menu">
         <q-menu
           transition-show="scale"
@@ -19,6 +20,7 @@
           </q-list>
         </q-menu>
       </q-btn>
+      </div>
       <q-btn color="primary" label="Scale Menu">
         <q-menu
           transition-show="scale"
@@ -38,11 +40,12 @@
           </q-list>
         </q-menu>
       </q-btn>
-
+        <div>
        <q-separator dark vertical />
       <q-btn stretch flat label="Registruotis" />
       <q-separator dark vertical />
-      <q-btn stretch flat label="Prisijungti" />
+      <q-btn stretch flat :label="title" />
+      </div>
     </div>
 </template>
 
@@ -51,5 +54,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'MenuButtons',
+  props: {
+    title: {
+      type: String,
+    },
+  },
 });
 </script>
