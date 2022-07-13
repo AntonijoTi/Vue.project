@@ -1,9 +1,8 @@
 <template>
 
-  <div class="q-pa-md row items-start " style="margin:0
-  ">
-    <q-card class="my-card" >
-        <img :src="img" style=" margin: 0px auto" >
+  <div class="q-pa-md row items-start ">
+    <q-card class="my-card shadow-0">
+        <img :src="img">
       <q-card-section>
         <div class="text-h12">
         </div>
