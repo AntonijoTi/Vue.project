@@ -1,6 +1,6 @@
 <template>
    <div class="q-pa-md">
-    <div class="row q-gutter-md q-mb-md">
+    <div class="row q-gutter-md gitext-h6">
       <div><p>NAUJAUSIOS</p></div>
     </div>
 
@@ -14,9 +14,9 @@
         <div class="contanier" ref="test">
     <ul>
       <li v-for="n in 20" :key="n" class="q-pa-xs" style=" list-style-type: none;">
-      <span class="text-caption">14:13</span>
-      <a href="https://www.krepsinis.net/" class="text-subtitle1" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, porro?
-      </a>
+      <span class="text-weight-medium ">14:13</span>
+      <a href="https://www.krepsinis.net/" style="text-decoration: none; color: inherit;" class="text-body1" >
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, porro?</a>
       </li>
     </ul>
   </div>
