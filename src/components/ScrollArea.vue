@@ -1,20 +1,26 @@
 <template>
-<div class="q-ma-md">
+   <div class="q-pa-md">
+    <div class="row q-gutter-md q-mb-md">
+      <div><p>NAUJAUSIOS</p></div>
+    </div>
+
         <q-scroll-area
           :thumb-style="thumbStyle"
           :bar-style="barStyle"
           :visible="true"
           style="height: 400px; max-width: 300px;"
         >
-          <div v-for="n in 1000" :key="n" class="q-pa-xs">
-            <div>
-              <a
-                href=""
-                style="text-decoration: none;">
-                basketball
-              </a>
-            </div>
-          </div>
+
+        <div class="contanier" ref="test">
+    <ul>
+      <li v-for="n in 20" :key="n" class="q-pa-xs" style=" list-style-type: none;">
+      <span class="text-caption">14:13</span>
+      <a href="https://www.krepsinis.net/" class="text-subtitle1" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, porro?
+      </a>
+      </li>
+    </ul>
+  </div>
+
         </q-scroll-area>
     </div>
 </template>
@@ -26,6 +32,9 @@ export default defineComponent({
   name: 'ScrollArea',
   props: {
     title: {
+      type: String,
+    },
+    href: {
       type: String,
     },
   },
