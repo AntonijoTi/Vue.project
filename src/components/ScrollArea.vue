@@ -1,8 +1,6 @@
 <template>
    <div class="q-pa-md">
-    <div class="row q-gutter-md gitext-h6">
-      <div><p>NAUJAUSIOS</p></div>
-    </div>
+      <div class="text-h5 q-pa-md">NAUJAUSIOS</div>
 
         <q-scroll-area
           :thumb-style="thumbStyle"
