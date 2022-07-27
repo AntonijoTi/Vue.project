@@ -6,11 +6,11 @@
       <q-card-section>
         <div class="text-h12">
         </div>
-        <div class="text-subtitle2">by John Doe</div>
+        <div class="text-subtitle2"> {{ author }}</div>
       </q-card-section>
 
       <q-card-section class="q-pt-none">
-        {{ lorem }}
+        {{ title }}
       </q-card-section>
     </q-card>
 </div>
@@ -28,8 +28,10 @@ export default defineComponent({
     img: {
       type: String,
     },
+    author: {
+      type: String,
+    },
   },
-
   setup() {
     return {
       lorem: '„Shaqtin\' A Fool“ – nepavykusi J.Valančiūno bendraklubio afera ir „Nets“ nesusipratimas',

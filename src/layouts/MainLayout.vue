@@ -29,15 +29,10 @@
     <q-separator style='margin-right: 100px; margin-left: 100px'/>
     <!--  Cards (two in line) -->
     <div class="row justify-center">
-      <div class="col-2" style="max-width: 400px">
+      <div v-for="a in cards" :key="a" class="col-2" style="max-width: 400px">
         <SmallCard
-          title="olololo"
-          img="https://static3.krepsinis.net/Uploads/Static/Images/680x434/3/77/c0/13/77c013209c649f548774e759a340b608.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/6e/9a/cb/1a/6e9acb1a5b5a31005650656ad5e519d6.jpg"
-        />
-      </div>
-      <div class="col-2" style="max-width: 400px">
-        <SmallCard
-          title="olololo"
+          :title="a.title"
+          :author="a.author"
           lass="col col-md-4"
           img="https://static2.krepsinis.net/Uploads/Static/Images/680x434/3/a6/27/d3/a627d337412fe304d03b37e51fd72ec5.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/e3/9e/c0/88/e39ec08858d9938b3717ac4f3f4c1a45.jpg"
         />
@@ -67,19 +62,31 @@
 
 <script>
 import { defineComponent } from 'vue';
+import axios from 'axios';
 import MenuButtons from '../components/MenuButtons';
 import SmallCard from '../components/SmallCard';
 import ScrollArea from '../components/ScrollArea';
 
 export default defineComponent({
   name: 'MainLayout',
+  data() {
+    return {
+      cards: [],
+    };
+  },
 
   components: {
     MenuButtons,
     SmallCard,
     ScrollArea,
   },
-
+  mounted() {
+    axios('https://un4szcmf.directus.app/items/Card')
+      .then((response) => {
+        console.log(response);
+        this.cards = response.data.data;
+      });
+  },
   setup() {
     return {
 

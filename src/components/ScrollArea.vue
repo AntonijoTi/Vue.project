@@ -11,11 +11,9 @@
 
         <div class="contanier" ref="test">
     <ul>
-      {{articles}}
-      <li v-for="n in 20" :key="n" class="q-pa-xs" style=" list-style-type: none;">
-      <span class="text-weight-medium ">14:13</span>
-      <a href="https://www.krepsinis.net/" style="text-decoration: none; color: inherit;" class="text-body1" >
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, porro?</a>
+      <li v-for="a in articles" :key="a" class="q-pa-xs" style=" list-style-type: none;">
+      <span class="text-weight-medium ">{{a.datetime}}</span>
+      {{a.Title}}
       </li>
     </ul>
   </div>
