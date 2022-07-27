@@ -11,6 +11,7 @@
 
         <div class="contanier" ref="test">
     <ul>
+      {{articles}}
       <li v-for="n in 20" :key="n" class="q-pa-xs" style=" list-style-type: none;">
       <span class="text-weight-medium ">14:13</span>
       <a href="https://www.krepsinis.net/" style="text-decoration: none; color: inherit;" class="text-body1" >
@@ -25,9 +26,15 @@
 
 <script>
 import { defineComponent } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   name: 'ScrollArea',
+  data() {
+    return {
+      articles: [],
+    };
+  },
   props: {
     title: {
       type: String,
@@ -35,6 +42,13 @@ export default defineComponent({
     href: {
       type: String,
     },
+  },
+  mounted() {
+    axios('https://un4szcmf.directus.app/items/article')
+      .then((response) => {
+        console.log(response);
+        this.articles = response.data.data;
+      });
   },
   setup() {
     return {
