@@ -2626,6 +2626,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+directus-extension-display-link@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/directus-extension-display-link/-/directus-extension-display-link-1.5.2.tgz#7558dd5165ae00ff47761215b0293307bb1e6790"
+  integrity sha512-LG1KGynare2qUCbCVwjn7i9XU7immvfneAJF49Y8NZOMBY87Vw8Wjs6YYNyfr47NkOCQ0E0xgUQSIM5hauoP7Q==
+
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"

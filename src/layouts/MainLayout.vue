@@ -12,11 +12,10 @@
       </div>
     </q-toolbar>
     <!--  Cards (one card and one scroll) -->
-    <div class="row justify-center">
-      <div class="col-4">
+    <div class="row justify-center" >
+      <div class="col-6">
         <SmallCard
-          title="olololo"
-          img="https://static2.krepsinis.net/Uploads/Static/Images/680x434/3/02/23/8d/02238d49420b48eb02bc7320186ade05.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/7a/7a/3a/ea/7a7a3aeaecf8a9359693bc57198aae9f.jpg"
+          photo="9781d3d7-8f7d-46e3-97f9-feaa525363cd"
         />
       </div>
       <!-- Scrolll area -->
@@ -28,29 +27,12 @@
     </div>
     <q-separator style='margin-right: 100px; margin-left: 100px'/>
     <!--  Cards (two in line) -->
-    <div class="row justify-center">
-      <div v-for="a in cards" :key="a" class="col-2" style="max-width: 400px">
+    <div class="row justify-center ">
+      <div v-for="a in cards" :key="a" class="col-6">
         <SmallCard
           :title="a.title"
           :author="a.author"
-          lass="col col-md-4"
-          img="https://static2.krepsinis.net/Uploads/Static/Images/680x434/3/a6/27/d3/a627d337412fe304d03b37e51fd72ec5.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/e3/9e/c0/88/e39ec08858d9938b3717ac4f3f4c1a45.jpg"
-        />
-      </div>
-    </div>
-     <q-separator style='margin-right: 100px; margin-left: 100px'/>
-    <div class="row justify-center">
-      <div class="col-2" style="max-width: 400px">
-        <SmallCard
-          title="olololo"
-          img="https://static3.krepsinis.net/Uploads/Static/Images/680x434/3/77/c0/13/77c013209c649f548774e759a340b608.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/6e/9a/cb/1a/6e9acb1a5b5a31005650656ad5e519d6.jpg"
-        />
-      </div>
-      <div class="col-2" style="max-width: 400px,">
-        <SmallCard
-          title="olololo"
-          lass="col col-md-4"
-          img="https://static2.krepsinis.net/Uploads/Static/Images/680x434/3/a6/27/d3/a627d337412fe304d03b37e51fd72ec5.jpg?v=3.00.126&t=cr&s=680x434&m=3&f=/Uploads/UArticles/leadPhotos/e3/9e/c0/88/e39ec08858d9938b3717ac4f3f4c1a45.jpg"
+          :photo="a.photo"
         />
       </div>
     </div>

@@ -1,17 +1,16 @@
 <template>
 
-  <div class="q-pa-md row items-start ">
+  <div class="q-pa-lg items-start ">
     <q-card class="my-card shadow-0">
-        <img :src="img">
+        <img :src="'https://un4szcmf.directus.app/assets/' + photo">
       <q-card-section>
         <div class="text-h12">
         </div>
         <div class="text-subtitle2"> {{ author }}</div>
       </q-card-section>
-
-      <q-card-section class="q-pt-none">
+        <q-card-section class="q-pt-none">
         {{ title }}
-      </q-card-section>
+        </q-card-section>
     </q-card>
 </div>
 </template>
@@ -29,6 +28,12 @@ export default defineComponent({
       type: String,
     },
     author: {
+      type: String,
+    },
+    photo: {
+      type: String,
+    },
+    datetime: {
       type: String,
     },
   },
