@@ -9,7 +9,9 @@
         <div class="text-subtitle2"> {{ author }}</div>
       </q-card-section>
         <q-card-section class="q-pt-none">
+          <a style="text-decoration: none; color: inherit;" :href="link">
         {{ title }}
+        </a>
         </q-card-section>
     </q-card>
 </div>
@@ -36,10 +38,12 @@ export default defineComponent({
     datetime: {
       type: String,
     },
+    link: {
+      type: String,
+    },
   },
   setup() {
     return {
-      lorem: '„Shaqtin\' A Fool“ – nepavykusi J.Valančiūno bendraklubio afera ir „Nets“ nesusipratimas',
     };
   },
 });

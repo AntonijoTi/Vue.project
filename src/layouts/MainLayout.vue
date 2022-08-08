@@ -12,27 +12,31 @@
       </div>
     </q-toolbar>
     <!--  Cards (one card and one scroll) -->
-    <div class="row justify-center" >
-      <div class="col-6">
+    <div
+      style="max-width: 800px; margin: auto;"
+     >
+       <div class="row justify-center" >
+          <div class="col-8">
         <SmallCard
-          photo="9781d3d7-8f7d-46e3-97f9-feaa525363cd"
+          photo="fbbc0e93-527d-4ac4-a211-bc8cecd2e754"
         />
-      </div>
+          </div>
       <!-- Scrolll area -->
-      <div class="col-4">
+          <div class="col-4">
         <ScrollArea
         title="ScrollBar"
         />
-      </div>
-    </div>
-    <q-separator style='margin-right: 100px; margin-left: 100px'/>
-    <!--  Cards (two in line) -->
-    <div class="row justify-center ">
-      <div v-for="a in cards" :key="a" class="col-6">
-        <SmallCard
+          </div>
+        </div>
+          <!-- <q-separator/> -->
+          <!--  Cards (two in line) -->
+          <div class="row justify-center">
+      <div v-for="a in cards" :key="a" class="col-md-6">
+        <SmallCard style="border-top: 1px solid gray;"
           :title="a.title"
           :author="a.author"
           :photo="a.photo"
+          :link="a.link"
         />
       </div>
     </div>
@@ -40,6 +44,7 @@
   <!-- Empty Area -->
       <div class="col-4">
       </div>
+    </div>
  </template>
 
 <script>

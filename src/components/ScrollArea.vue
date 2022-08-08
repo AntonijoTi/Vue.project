@@ -12,8 +12,8 @@
         <div class="contanier" ref="test">
     <ul>
       <li v-for="a in articles" :key="a" class="q-pa-xs" style=" list-style-type: none;">
-      <span class="text-weight-medium ">{{a.datetime}}</span>
-      {{a.Title}}
+      <span class="text-weight-medium ">{{ a.datetime }}</span>
+      <a  style="text-decoration: none; color: inherit;" :href="a.url"> {{ a.Title }}  </a>
       </li>
     </ul>
   </div>
@@ -35,6 +35,9 @@ export default defineComponent({
   },
   props: {
     title: {
+      type: String,
+    },
+    url: {
       type: String,
     },
     href: {
